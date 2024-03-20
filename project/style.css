@@ -1,0 +1,426 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: black;
+}
+
+.glavna{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(projectslike/glavna.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar{
+    width: 100%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+}
+
+.logo{
+    width: 250px;
+    cursor: pointer;
+    margin-left: 100px;
+}
+
+.meni{
+    margin-left: 500px;
+}
+
+.login{
+    display: flex;
+    margin-right: 150px;
+}
+
+.logtekst{
+    margin-top: 10px;
+}
+
+.logtekst a{
+    margin-left: 40px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: dimgray;
+}
+
+
+.navbar .meni ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 12px;
+    position: relative;
+}
+
+.navbar .meni ul li a{
+    text-decoration: none;
+    color: dimgray;
+    text-transform: uppercase;
+}
+
+.navbar .meni ul li::after{
+    content:'';
+    height: 1px;
+    width: 0%;
+    background: white;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar .meni ul li:hover:after{
+    width: 100%;
+}
+
+.content{
+    text-align: center;
+    margin-top: 300px;
+    color: white;
+    font-size: 35px;
+}
+
+.content button{
+    padding: 20px 50px 20px 50px;
+    font-size: 20px;
+    margin-top: 20px;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    cursor: pointer;
+}
+
+.content button:hover{
+    background-color: white;
+    color: black;
+    transition: 0.5s;
+}
+
+.login #search{
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+.login #search::placeholder{
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+.druga{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}   
+
+.desno{
+    width: 50%;
+}
+
+.lijevo{
+    width: 50%;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+}
+
+.lijevo button{
+    padding: 20px 50px 20px 50px;
+    margin-top: 20px;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.lijevo button:hover{
+    background-color: white;
+    color: black;
+    transition: 0.5s;
+}
+
+.desno img{
+    width: 100%;
+}
+
+.parenttri{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+}
+
+.sliba1{
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.sliba2{
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.sliba3{
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.sliba1 img{
+    width: 100%;
+    cursor: pointer;
+    transition: all 1.1s;
+    transition-timing-function: ease;
+}
+
+.sliba1 img:hover{
+    transform: scale(1.1);
+}
+
+
+.sliba2 img:hover{
+    transform: scale(1.1);
+}
+
+.sliba3 img:hover{
+    transform: scale(1.1);
+}
+
+.sliba2 img{
+    width: 100%;
+    cursor: pointer;
+    transition: all 1.1s;
+    transition-timing-function: ease;
+}
+
+.sliba3 img{
+    width: 100%;
+    cursor: pointer;
+    transition: all 1.1s;
+    transition-timing-function: ease;
+}
+
+.cetnaslov{
+    text-align: center;
+    color: white;
+    margin-top: 100px;
+}
+
+.cetnaslov h2{
+    font-size: 80px;
+}
+
+.cetnaslov p{
+    font-size: 30px;
+}
+
+.cetslike{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.cetslika1{
+    margin-left: 150px;
+    
+}
+
+.cetslika3{
+    margin-right: 150px;
+}
+
+.cetslika1 img{
+    height: 400px;
+    cursor: pointer;
+    transition: all 1.1s;
+    transition-timing-function: ease;
+}
+
+.cetslika1 img:hover{
+    transform: scale(1.1);
+}
+
+.cetslika2 img:hover{
+    transform: scale(1.1);
+}
+
+.cetslika3 img:hover{
+    transform: scale(1.1);
+}
+
+
+.cetslika2 img{
+    height: 400px;
+    cursor: pointer;
+    transition: all 1.1s;
+    transition-timing-function: ease;
+}
+.cetslika3 img{
+    height: 400px;
+    cursor: pointer;
+    transition: all 1.1s;
+    transition-timing-function: ease;
+}
+
+.info{
+    text-align: center;
+    color: white;
+    margin-top: 30px;
+}
+
+.info button{
+    margin-top: 20px;
+    padding: 20px 50px;
+    font-size: 20px;
+    border-radius: 10px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    transition: all 0.5s;
+    transition-timing-function: 0.5s;
+}
+
+.info button:hover{
+    background-color: white;
+    color: black;
+}
+
+.petaslika{
+    margin-top: 100px;
+    text-align: center;
+    color: white;
+    position: relative;
+    background-size: cover;
+}
+
+.petaprazna{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    font-size: 30px;
+    background-color: black;
+    height: 100%;
+    text-align: center;
+    padding-right:40px;
+    opacity:50%;
+}
+
+.petaprazna h2{
+    margin-top: 350px;
+    margin-left: 100px;
+    margin-bottom: 20px;
+    font-size: 80px;
+    opacity: 100%;
+}
+
+.petaprazna p{
+    font-size: 20px;
+    margin-left: 100px;
+}
+
+.petaslika img{
+    width: 100%;
+    height: 100vh;
+}
+
+.sestaforma{
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: left;
+    margin-right: 150px;
+}
+
+.firstlast{
+    font-size: 20px;
+    margin-top: 50px;
+    text-align: left;
+    margin-left: 150px;
+}
+
+.firstlast button{
+    padding: 10px 30px;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s;
+    transition-timing-function: 1.1s;
+}
+
+.firstlast input{
+    padding: 10px 20px;
+    padding-left: 10px;
+    margin-top: 10px;
+    background-color: transparent;
+    border-radius: 10px;
+    border: 2px solid white;
+    color: white;
+}
+
+.firstlast button:hover{
+    background-color: white;
+    color: black;
+}
+
+.contactus h2{
+    font-size: 60px;
+}
+
+.contactus p{
+    font-size: 20px;
+}
+footer{
+    margin-top: 40px;
+    width: 100%;
+    background-color: rgb(37, 37, 37);
+    padding: 300px;
+    width: 100%;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footertext{
+    color: gray;
+    margin-left: 200px;
+    font-size: 17px;
+}
+
+
+.menifooter ul li{
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    margin-left: 30px;
+    font-size: 17px;
+}
+
+
+.menifooter ul li a{
+    text-decoration: none;
+    color: gray;
+}
+
+.menifooter ul li a:hover{
+    color: white;
+    transition: all 0.3s;
+    text-decoration: underline;
+}
