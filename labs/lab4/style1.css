@@ -1,0 +1,51 @@
+body{
+    background-color: rgb(212, 212, 212) !important;
+}
+
+.container{
+    margin-top: 20px;
+}
+
+td{
+    border: none; 
+}
+
+.ipnut i{
+    background-color: lightgray;
+    padding: 6px 10px;
+    border: 1px solid gray;
+    margin-right: -5px;
+}
+
+.ipnutt i{
+    position: relative;
+    bottom: 33px;
+    left: 5px;
+    background-color: lightgray;
+    padding: 30px 10px 30px 10px;
+    border: 1px solid gray;
+}
+
+.selekt{
+    padding: 2px 97px 3px 5px;
+}
+
+.selekt option{
+    color: rebeccapurple
+}
+
+input::placeholder{
+    padding-left: 2px;
+}
+
+input{
+    padding-right: 70px;
+}
+
+.dugme button{
+    margin-left: 5px;
+    padding: 5px 20px 5px 20px;
+    background-color: rgb(228, 145, 22);
+    font-weight: bold;
+    color: white;
+}
