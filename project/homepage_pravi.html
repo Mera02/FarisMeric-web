@@ -3,151 +3,213 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Homepage</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
     
     <div class="glavna">
-        <div class="navbar">
-        <div>
-            <img src="projectslike/projekatlogo.png" alt="logo" class="logo">
-        </div>
-            <div class="meni">
-            <ul>
-                <li><a href="shop.html">SHOP</a></li>
-                <li><a href="#aboutus">ABOUT</a></li>
-                <li><a href="groups.html">GROUPS</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-            </ul>
-            </div>
-            <div class="login">
-            <form action="">
-                <input type="text" name="search" id="search" placeholder="Search">
-            </form>
-                <div class="logtekst">
-                    <p><a href="">Log in</a></p>
+        <div class="navbare">
+            <nav class="navbar">
+                <a href="homepage_pravi.html" class="navbar-brand"><img src="projectslike/projekatlogo.png" alt=""></a>
+                <div class="meni">
+                    <a class="navbar-brand" href="shop.html">Shop</a>
+                    <a class="navbar-brand" href="#aboutus">About Us</a>
+                    <a class="navbar-brand" href="groups.html">Groups</a>
+                    <a class="navbar-brand" href="#kontakt">Contact</a>
                 </div>
-            </div>
+                <form class="form-inline">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+              </nav>
         </div>
+        <!---GOTOV HEADER SAD ZA SAD-->
 
         <div class="content">
             <h1>PLAN YOUR ADVENTURE</h1>
-            <a href="shop.html"><button type="button">SHOP NOW</button></a>
+            <a href="shop.html"><button type="button" class="btn btn-outline-light">SHOP NOW</button></a>
         </div>
     </div>
-
+    <!---GOTOVA SLIKA-->
     
+
+
     <div class="druga">
-        <div class="lijevo">
-            <h2>NEW ARRIVALS</h2>
-            <a href="shop.html"><button type="button">SHOP NOW</button></a>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="lijevo">
+                    <h2>NEW ARRIVALS</h2>
+                    <a href="shop.html"><button type="button" class="btn btn-outline-light">SHOP NOW</button></a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="desno">
+                    <img src="projectslike/arrival.jpg" alt="arrival">
+                </div>
+            </div>
         </div>
-        <div class="desno">
-            <img src="projectslike/arrival.jpg" alt="arrival">
-        </div>
-    </div>
+
+    <!---GOTOVA DRUGA SEKCIJA-->
+
 
     <div class="treca">
-        <div class="parenttri">
-            <div class="sliba1">
-                <img src="projectslike/jedan.jpg" alt="prvi">
-            </div>
-
-            <div class="sliba2">
-                <img src="projectslike/drugi.jpg" alt="drugi">
-            </div>
-
-            <div class="sliba3">
-                <img src="projectslike/treci.jpg" alt="treci">
-            </div>
-        </div>
-    </div>
-
-    <div class="cetvrta">
-        <div class="cetnaslov">
-            <h2>Now on sale</h2>
-            <p>Up to 50% off</p>
-        </div>
-        <div class="cetslike">
-            <div class="cetslika1">
-                <img src="projectslike/bag.png" alt="jedna">
-                <div class="info">
-                    <h2>Backpack</h2>
-                    <br>
-                    <p>104.00$</p>
-                    <button type="button">Buy now</button>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="sliba1">
+                    <img src="projectslike/jedan.jpg" alt="prvi">
                 </div>
             </div>
-            <div class="cetslika2">
-                <img src="projectslike/bag2.png" alt="jedna">
-                <div class="info">
-                    <h2>Backpack</h2>
-                    <br>
-                    <p>82.50$</p>
-                    <button type="button">Buy now</button>
+            <div class="col-md-4">
+                <div class="sliba2">
+                    <img src="projectslike/drugi.jpg" alt="drugi">
                 </div>
             </div>
-            <div class="cetslika3">
-                <img src="projectslike/bag3.png" alt="jedna">
-                <div class="info">
-                    <h2>Backpack</h2>
-                    <br>
-                    <p>67.50$</p>
-                    <button type="button">Buy now</button>
+            <div class="col-md-4">
+                <div class="sliba3">
+                    <img src="projectslike/treci.jpg" alt="treci">
                 </div>
             </div>
         </div>
+    
     </div>
 
-    <div class="peta">
-        <div class="petaslika">
-            <img src="projectslike/aboutus.jpg" alt="aboutus">
-            <div class="petaprazna">
-                <h2>About us</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Voluptas cupiditate ex necessitatibus unde quisquam consequatur nobis facere, <br> pariatur voluptatem praesentium voluptates vel.</p>
+
+ <!---GOTOVA TRECA SEKCIJA-->
+
+
+
+    <div class="container">
+        <div class="row cet">
+            <div class="col-md-4">
+                <div class="cetslika1 info">
+                        <img src="projectslike/bag.png" alt="jedna">
+                        <div class="info">
+                            <h2>Hill Hauler</h2>
+                            <p><span class="novo">NEW</span></p>
+                            <p>129.99$</p>
+                            <a href="shop.html"><button type="button">Buy now</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="cetslika2 info">
+                        <img src="projectslike/bag2.png" alt="jedna">
+                        <div class="info">
+                            <h2>Summit Satchel</h2>
+                            <p><span class="novo">NEW</span></p>
+                            <p>139.99$</p>
+                            <a href="shop.html"><button type="button">Buy now</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="cetslika3 info">
+                        <img src="projectslike/bag3.png" alt="jedna">
+                        <div class="info">
+                            <h2>Trail Toter</h2>
+                            <p><span class="novo">NEW</span></p>
+                            <p>149.99$</p>
+                            <a href="shop.html"><button type="button">Buy now</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!---GOTOVA CETVRTA SEKCIJA-->
+
+
+    <div class="peta" id="aboutus">
+        <div class="row">
+            <div class="col-md-6 boutus">
+                <div class="aboutus">
+                    <h2>ABOUT US</h2>
+                    <p>neki paragraf random</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                    
             </div>
         </div>
     </div>
 
-    <div class="sesta">
-        <div class="sestaforma">
-            <div class="firstlast">
-                <form action="">
-                    <label for="name">First Name*</label><br>
-                    <input type="text" name="ime" id="firstname" required><br><br>
-                    <label for="last">Last Name*</label><br>
-                    <input type="text" name="prezime" id="lastname" required><br><br>
-                    <label for="email">Enter your mail*</label><br>
-                    <input type="email" required><br><br>
-                    <label for="subject">Enter your subject</label><br>
-                    <input type="text"><br><br>
-                    <button type="button">SEND NOW</button>
-                </form>
-            </div>
-            <div class="contactus">
-                <h2>Contact us</h2>
-                <p>I'm a paragraph. <br> Click here to add your own text and edit me. <br></p>
-                <br><br>
-                <p>info@my-domain.com</p>
-                <p>Tel: 1-800-000-0000</p>
+
+<!---GOTOVA PETA SEKCIJA-->
+
+
+
+
+    <div class="sesta" id="kontakt">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="container">
+                        <form>
+                            <div class="row ime">
+                              <div class="col">
+                                <label for="">First Name*</label>
+                                <input type="text" class="form-control">
+                              </div>
+                              <div class="col">
+                                <label for="">Last Name*</label>
+                                <input type="text" class="form-control">
+                              </div>
+                            </div>
+                            <div class="form-group forme">
+                              <label for="formGroupExampleInput">Enter Your Email</label>
+                              <input type="text" class="form-control" id="formGroupExampleInput">
+                            </div>
+                            <div class="form-group forme">
+                              <label for="formGroupExampleInput2">Enter Your Subject</label>
+                              <input type="text" class="form-control" id="formGroupExampleInput2">
+                            </div>
+                            <div class="form-group forme">
+                                <label for="formGroupExampleInput2">Enter Your Subject</label>
+                                <textarea name="" id="" cols="50" rows="4"></textarea>
+                                <button type="button" class="btn btn-light">Send</button>
+                              </div>
+                          </form>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="kontakt">
+                        <h2>Contact</h2>
+                        <p>Neki paragraf</p>
+                        <br>
+                        <p>info@my-domain.com</p>
+                        <p>Tel: 1-800-000-0000</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
+<!---GOTOVA PETA SEKCIJA-->
+
     <footer>
-        <div class="footertext">
-            <p>© 2035 by PolarJourney.</p>
-        </div>
-        <div class="menifooter">
-            <ul>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Groups</a></li>
-                <li><a href="#">Shipping & Returns</a></li>
-                <li><a href="#">Terms and Conditions</a></li>
-            </ul>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6" id="lijevo">
+                    <div class="footertext">
+                        <p>© 2035 by PolarJourney.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="footermeni">
+                        <a class="navbar-brand" href="#">FAQ</a>
+                        <a class="navbar-brand" href="groups.html">Groups</a>
+                        <a class="navbar-brand" href="shipping.html">Shipping & Returns</a>
+                        <a class="navbar-brand" href="terms.html">Terms and Condition</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 
-
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
