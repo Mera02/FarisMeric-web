@@ -8,19 +8,6 @@ function hideSidebar(){
     sidebar.style.display = 'none'
 }
 
-function readMore(dugme){
-    let opis = document.querySelector('.opisslike');
-    let dgm = dugme.innerText;
-
-    if(opis){
-        dgm = 'Show less';
-        opis.style.display = "flex";
-    }else{
-        dgm = "More Details";
-        opis.style.display = "none";
-    }
-
-}
 
 function switcher() {
     var body = document.body;
@@ -137,3 +124,31 @@ function switcher() {
 
 
 
+document.addEventListener("DOMContentLoaded", function() {
+    // Get all product images
+    var productImages = document.querySelectorAll('.product-image');
+
+    // Add click event listener to each image
+    productImages.forEach(function(image) {
+        image.addEventListener('click', function() {
+            var largeImageSrc = this.src; // Get the source of the clicked image
+            showLargeImage(largeImageSrc); // Call function to display large image
+        });
+    });
+
+    // Function to display large image in overlay
+    function showLargeImage(src) {
+        var overlay = document.getElementById('overlay');
+        var largeImage = document.getElementById('large-image');
+        largeImage.src = src; // Set the source of the large image to the clicked image source
+        overlay.style.display = 'flex'; // Show overlay
+    }
+
+    // Hide overlay when clicking outside of the large image
+    var overlay = document.getElementById('overlay');
+    overlay.addEventListener('click', function(e) {
+        if (e.target === this) {
+            this.style.display = 'none';
+        }
+    });
+});
