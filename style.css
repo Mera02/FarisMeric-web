@@ -1225,3 +1225,47 @@ body.dark-mode {
     padding: 18px 40px;
     border-radius: 10px;
 }
+
+/* prelazimo na faq */
+
+.faqnaslov {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    padding-bottom: 70px;
+}
+
+.faqnaslov h2 {
+    margin-bottom: 30px;
+}
+
+.faqsve p {
+    font-weight: bold;
+    color: white;
+    margin-top: 50px;
+}
+
+.question {
+    margin-bottom: 40px;
+    cursor: pointer;
+}
+
+.answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease; /* Add transition for smooth animation */
+}
+
+.answer p {
+    font-size: 13px;
+}
+
+.answer.show {
+    max-height: 1000px; /* Set max-height to a large value to allow content expansion */
+    transition: max-height 0.3s ease; /* Add transition for smooth animation */
+}
+
+.faqsve{
+    color: white;
+}

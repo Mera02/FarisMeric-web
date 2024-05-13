@@ -176,3 +176,18 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.href = 'details3.html';
     });
 });
+
+
+// radimo faq
+
+document.addEventListener("DOMContentLoaded", function() {
+    const questions = document.querySelectorAll(".question");
+
+    questions.forEach(question => {
+        const title = question.querySelector("h5");
+        title.addEventListener("click", function() {
+            const answer = question.querySelector(".answer");
+            answer.classList.toggle("show");
+        });
+    });
+});
