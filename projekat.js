@@ -152,3 +152,27 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+
+/* pocinjemo sa view more */
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('moredetails1').addEventListener('click', function() {
+        // Redirect to the details page
+        window.location.href = 'details1.html';
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('moredetails2').addEventListener('click', function() {
+        // Redirect to the details page
+        window.location.href = 'details2.html';
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('moredetails3').addEventListener('click', function() {
+        // Redirect to the details page
+        window.location.href = 'details3.html';
+    });
+});
