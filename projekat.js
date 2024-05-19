@@ -191,3 +191,50 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+
+$(document).ready(function() {
+    $('#registerButton').on('click', function(event) {
+        let valid = true;
+
+        // First Name validation
+        if ($('#prvoime').val().trim().length < 2) {
+            valid = false;
+            $('#firstnameError').text('First name must be at least 2 characters');
+        } else {
+            $('#firstnameError').text('');
+        }
+
+        // Last Name validation
+        if ($('#lastnejm').val().trim().length < 2) {
+            valid = false;
+            $('#lastnameError').text('Last name must be at least 2 characters');
+        } else {
+            $('#lastnameError').text('');
+        }
+
+        // Email validation
+        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        if (!emailPattern.test($('#email').val().trim())) {
+            valid = false;
+            $('#emailError').text('Please enter a valid email address');
+        } else {
+            $('#emailError').text('');
+        }
+
+        // Password validation
+        const passwordPattern = /^(?=.*\d)(?=.*[a-zA-Z]).{6,}$/;
+        if (!passwordPattern.test($('#subject').val().trim())) {
+            valid = false;
+            $('#passwordError').text('Password must be at least 6 characters long and contain both letters and numbers');
+        } else {
+            $('#passwordError').text('');
+        }
+
+        if (!valid) {
+            event.preventDefault();
+        } else {
+            alert('Form submitted successfully!');
+        }
+    });
+});
