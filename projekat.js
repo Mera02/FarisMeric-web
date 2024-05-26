@@ -192,6 +192,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+// login validacija forme
 
 $(document).ready(function() {
     $('#registerButton').on('click', function(event) {
@@ -200,7 +201,7 @@ $(document).ready(function() {
         // First Name validation
         if ($('#prvoime').val().trim().length < 2) {
             valid = false;
-            $('#firstnameError').text('First name must be at least 2 characters');
+            $('#firstnameError').css({'color': 'red', 'font-size': '12px'}).text('Please enter a valid first name');
         } else {
             $('#firstnameError').text('');
         }
@@ -208,7 +209,7 @@ $(document).ready(function() {
         // Last Name validation
         if ($('#lastnejm').val().trim().length < 2) {
             valid = false;
-            $('#lastnameError').text('Last name must be at least 2 characters');
+            $('#lastnameError').css({'color': 'red', 'font-size': '12px'}).text('Please enter a valid last name');
         } else {
             $('#lastnameError').text('');
         }
@@ -217,7 +218,7 @@ $(document).ready(function() {
         const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
         if (!emailPattern.test($('#email').val().trim())) {
             valid = false;
-            $('#emailError').text('Please enter a valid email address');
+            $('#emailError').css({'color': 'red', 'font-size': '12px'}).text('Please enter a valid email address');
         } else {
             $('#emailError').text('');
         }
@@ -226,15 +227,39 @@ $(document).ready(function() {
         const passwordPattern = /^(?=.*\d)(?=.*[a-zA-Z]).{6,}$/;
         if (!passwordPattern.test($('#subject').val().trim())) {
             valid = false;
-            $('#passwordError').text('Password must be at least 6 characters long and contain both letters and numbers');
+            $('#passwordError').css({'color': 'red', 'font-size': '12px'}).text('Please enter a valid password (at least 6 characters with both letters and numbers)');
         } else {
             $('#passwordError').text('');
         }
 
-        if (!valid) {
-            event.preventDefault();
+        if (valid) {
+            // AJAX form submission
+            const formData = {
+                firstName: $('#prvoime').val().trim(),
+                lastName: $('#lastnejm').val().trim(),
+                email: $('#email').val().trim(),
+                password: $('#subject').val().trim()
+            };
+
+            $.ajax({
+                url: 'http://127.0.0.1:5000/submit-form',  // Replace with your server endpoint
+                method: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(formData),
+                success: function(response) {
+                    if (response.success) {
+                        $('#formacijela')[0].reset();
+                        $('#form-success').show().delay(3000).fadeOut();
+                    } else {
+                        alert('Failed to submit form. Please try again.');
+                    }
+                },
+                error: function() {
+                    alert('Error submitting form. Please try again.');
+                }
+            });
         } else {
-            alert('Form submitted successfully!');
+            event.preventDefault();
         }
     });
 });
