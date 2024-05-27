@@ -1,0 +1,19 @@
+{
+    "comments": [
+        {
+            "name": "John Doe",
+            "content": "This backpack is amazing! Highly recommended.",
+            "timestamp": "2024-05-27T10:30:00Z"
+        },
+        {
+            "name": "Alice Smith",
+            "content": "I used this backpack on my last hiking trip and it held up really well.",
+            "timestamp": "2024-05-26T15:45:00Z"
+        },
+        {
+            "name": "Bob Johnson",
+            "content": "Great product! Exactly what I needed for my outdoor adventures.",
+            "timestamp": "2024-05-25T08:20:00Z"
+        }
+    ]
+}

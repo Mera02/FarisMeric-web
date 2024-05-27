@@ -1,0 +1,19 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Hill Hauler",
+            "price": 129.99
+        },
+        {
+            "id": 2,
+            "name": "Summit Satchel",
+            "price": 139.99
+        },
+        {
+            "id": 3,
+            "name": "Ridge Rucksack",
+            "price": 79.99
+        }
+    ]
+}

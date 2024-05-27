@@ -1269,3 +1269,70 @@ body.dark-mode {
 .faqsve{
     color: white;
 }
+
+/* password strength */
+
+#password-strength-container {
+    width: 100%;
+    background: #ddd;
+    height: 5px;
+    margin-top: 20px;
+    display: flex;
+  }
+  
+  #password-strength {
+    height: 5px;
+    background-color: #e1e1e1;
+    width: 100%;
+  }
+  
+  .strength-weak {
+    background-color: red !important;
+    width: 150px;
+  }
+  
+  .strength-medium {
+    background-color: orange !important;
+    width: 200px;
+  }
+  
+  .strength-strong {
+    background-color: green !important;
+    width: 250px;
+  }
+
+
+/* dara driven content */
+
+.comment {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.comment-content {
+    margin-bottom: 5px;
+}
+
+.comment-info {
+    font-style: italic;
+    color: #666;
+}
+
+
+
+/* edit and delete options */
+
+/* Styles for the entity list */
+.entity {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 5px;
+  }
+  
+  /* Button styles */
+  button {
+    margin-right: 5px;
+  }
+  

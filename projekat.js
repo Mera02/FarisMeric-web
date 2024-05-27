@@ -192,6 +192,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+// login validacija forme i submission sa success porukom
 
 $(document).ready(function() {
     $('#registerButton').on('click', function(event) {
@@ -200,7 +201,7 @@ $(document).ready(function() {
         // First Name validation
         if ($('#prvoime').val().trim().length < 2) {
             valid = false;
-            $('#firstnameError').text('First name must be at least 2 characters');
+            $('#firstnameError').css({'color': 'red', 'font-size': '12px'}).text('Please enter a valid first name');
         } else {
             $('#firstnameError').text('');
         }
@@ -208,7 +209,7 @@ $(document).ready(function() {
         // Last Name validation
         if ($('#lastnejm').val().trim().length < 2) {
             valid = false;
-            $('#lastnameError').text('Last name must be at least 2 characters');
+            $('#lastnameError').css({'color': 'red', 'font-size': '12px'}).text('Please enter a valid last name');
         } else {
             $('#lastnameError').text('');
         }
@@ -217,7 +218,7 @@ $(document).ready(function() {
         const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
         if (!emailPattern.test($('#email').val().trim())) {
             valid = false;
-            $('#emailError').text('Please enter a valid email address');
+            $('#emailError').css({'color': 'red', 'font-size': '12px'}).text('Please enter a valid email address');
         } else {
             $('#emailError').text('');
         }
@@ -226,15 +227,134 @@ $(document).ready(function() {
         const passwordPattern = /^(?=.*\d)(?=.*[a-zA-Z]).{6,}$/;
         if (!passwordPattern.test($('#subject').val().trim())) {
             valid = false;
-            $('#passwordError').text('Password must be at least 6 characters long and contain both letters and numbers');
+            $('#passwordError').css({'color': 'red', 'font-size': '12px'}).text('Please enter a valid password (at least 6 characters with both letters and numbers)');
         } else {
             $('#passwordError').text('');
         }
 
-        if (!valid) {
-            event.preventDefault();
-        } else {
-            alert('Form submitted successfully!');
+
+        // prikaz success poruke
+        if (valid) {
+            toastr.success('Form submitted successfully!'); // OVO JE TOASTR PORUKA
+            $('#prvoime').val('');
+            $('#lastnejm').val('');
+            $('#email').val('');
+            $('#subject').val('');
+        }    
+        
+    });
+});
+
+// password strength
+
+document.getElementById("subject").addEventListener("input", function () {
+    const strengthIndicator = document.getElementById("password-strength");
+    const password = this.value;
+    let strength = 0;
+  
+    if (password.match(/[a-z]/)) {
+      strength += 1;
+    }
+    if (password.match(/[A-Z]/)) {
+      strength += 1;
+    }
+    if (password.match(/[0-9]/)) {
+      strength += 1;
+    }
+    if (password.match(/[$@#!%*?&]/)) {
+      strength += 1;
+    }
+  
+    strengthIndicator.style.width = strength * 25 + "%";
+  
+    if (strength === 0) {
+      strengthIndicator.className = "";
+      strengthIndicator.style.width = "0%";
+    } else if (strength === 1) {
+      strengthIndicator.className = "strength-weak";
+    } else if (strength === 2) {
+      strengthIndicator.className = "strength-medium";
+    } else if (strength >= 3) {
+      strengthIndicator.className = "strength-strong";
+    }
+  });
+
+
+//data driven content
+
+$(document).ready(function() {
+    console.log("Document is ready");
+    
+    // Fetch comments via AJAX
+    $.ajax({
+        url: 'comments.json', // Path to your JSON file
+        dataType: 'json',
+        success: function(data) {
+            console.log("Data fetched successfully");
+            // Iterate over each comment and display it on the page
+            data.comments.forEach(function(comment) {
+                var commentHtml = '<div class="comment">';
+                commentHtml += '<p class="comment-content">' + comment.content + '</p>';
+                commentHtml += '<p class="comment-info">Posted by ' + comment.name + ' on ' + new Date(comment.timestamp).toLocaleString() + '</p>';
+                commentHtml += '</div>';
+                $('#comments-container').append(commentHtml);
+            });
+        },
+        error: function(xhr, status, error) {
+            console.error("Error fetching data: ", error); // Log any errors to the console
         }
     });
 });
+
+// edit i delete options
+
+// Simulated JSON data
+const jsonData = [
+    { id: 1, name: "Entity 1", description: "Description 1" },
+    { id: 2, name: "Entity 2", description: "Description 2" },
+    { id: 3, name: "Entity 3", description: "Description 3" }
+  ];
+  
+  // Function to display entities
+  function displayEntities() {
+    const entityList = document.getElementById("entity-list");
+    entityList.innerHTML = "";
+  
+    jsonData.forEach(entity => {
+      const entityDiv = document.createElement("div");
+      entityDiv.classList.add("entity");
+  
+      const nameLabel = document.createElement("span");
+      nameLabel.textContent = `Name: ${entity.name}, Description: ${entity.description}`;
+  
+      const editButton = document.createElement("button");
+      editButton.textContent = "Edit";
+      editButton.addEventListener("click", () => editEntity(entity.id));
+  
+      const deleteButton = document.createElement("button");
+      deleteButton.textContent = "Delete";
+      deleteButton.addEventListener("click", () => deleteEntity(entity.id));
+  
+      entityDiv.appendChild(nameLabel);
+      entityDiv.appendChild(editButton);
+      entityDiv.appendChild(deleteButton);
+  
+      entityList.appendChild(entityDiv);
+    });
+  }
+  
+  // Function to edit an entity
+  function editEntity(id) {
+    // Simulated edit functionality
+    alert(`Editing entity with ID ${id}`);
+  }
+  
+  // Function to delete an entity
+  function deleteEntity(id) {
+    // Simulated delete functionality
+    alert(`Deleting entity with ID ${id}`);
+  }
+  
+  // Display entities when the page loads
+  window.onload = displayEntities;
+  
