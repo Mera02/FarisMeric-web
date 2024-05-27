@@ -193,6 +193,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // login validacija forme i submission sa success porukom
+// login validacija forme
 
 $(document).ready(function() {
     $('#registerButton').on('click', function(event) {
