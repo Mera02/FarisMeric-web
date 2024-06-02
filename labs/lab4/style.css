@@ -1,0 +1,94 @@
+body{
+    background: linear-gradient(90deg, rgba(62,43,215,1) 33%, rgba(184,0,255,1) 100%);
+}
+
+
+.tabla{
+    background-color: white;
+    height: 96vh;
+    width: 98%;
+    margin-left: 15px;
+    margin-top: 17px;
+    border-radius: 20px;
+}
+
+img{
+    margin-top: 20vh;
+}
+
+.header{
+    text-align: center;
+    margin-top: 40%;
+}
+
+.header h2{
+    font-weight: bold;
+}
+
+.prva{
+    display: flex;
+    justify-content: center;
+}
+
+.forma{
+    margin-top: 50px;
+}
+
+#exampleInputEmail1{
+    width: 330px;
+    border-radius: 100px;
+    padding: 20px 60px;
+    background-color: rgb(221, 221, 221);
+}
+
+#exampleInputPassword1{
+    width: 330px;
+    border-radius: 100px;
+    padding: 20px 60px;
+    background-color: rgb(221, 221, 221);
+}
+
+.dugme{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.dugme button{
+    padding: 10px 140px 10px 140px;
+    background-color: rgb(23, 163, 34);
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 100px;
+}
+
+.dugme button:hover{
+    background-color: rgb(17, 105, 24);
+}
+
+.icon i{
+    position: absolute;
+    display: flex;
+    margin-top: 13px;
+    margin-left: 20px;
+}
+
+.forgot{
+    text-align: center;
+    margin-top: 10px;
+    color: rgb(114, 114, 114);
+}
+
+.create{
+    text-align: center;
+    margin-top: 50%;
+}
+
+.create a{
+    color: gray;
+    text-decoration: none;
+}
+
+.create a:hover{
+    color: rgb(85, 85, 85);
+    text-decoration: none;
+}

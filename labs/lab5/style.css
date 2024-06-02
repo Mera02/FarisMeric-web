@@ -1,0 +1,32 @@
+.sve{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.stolic{
+    height: 300px;
+    width: 1000px;
+}
+
+.razmak{
+    background-color: gray;
+}
+
+th{
+    text-align: left;
+    padding: 0px;
+    margin: 0px;
+}
+
+button{
+    padding: 5px 10px;
+}
+
+
+img{
+    height: 30px;
+    width: 30px;
+    border-radius: 100px;
+}

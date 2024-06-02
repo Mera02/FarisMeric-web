@@ -1,0 +1,58 @@
+body{
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px;
+    font-family: serif;
+    font-style: normal;
+}
+
+
+header{
+    display: flex;
+    background-color: rgb(246, 193, 164);
+    height: 323px;
+    justify-content: space-between;
+}    
+
+.naslov{
+    font-size: 100px;
+    margin-left: 50px;
+}
+
+.logo{
+    height: 100px;
+    margin-left: 50px;
+}
+
+.hero_section{
+    font-size: 26px;
+}
+
+
+.slibe{
+    background-color: rgb(245, 245, 235);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 25px;
+    text-align: center;
+}
+
+.donji{
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 15px;
+}
+.srednja{
+    margin-top: 30px;
+}
+
+footer{
+    text-align: center;
+    font-size: 30px;
+    background-color: rgb(246, 193, 164);
+    margin-bottom: 0px;
+    padding: 40px ;
+}

@@ -1,0 +1,134 @@
+body{
+    background:url(pozadina.png) !important;
+}
+
+#kanta{
+    padding: 20px 60px;
+}
+
+.box{
+    background-color: white;
+    height: 90vh;
+    margin-top: 5vh;
+}
+
+.profilna{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    margin-top: 50px;
+}
+
+.prva-forma{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.prva-forma input{
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.prva-forma input::placeholder{
+    padding-left: 9px;
+    color: black;
+}
+
+.pass{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-top: 30px;
+}
+
+.pass input{
+    border: none;
+    color: black;
+}
+.pass i{
+    position: absolute;
+    left: 410px;
+}
+
+.pass input::placeholder{
+    color: black;
+}
+
+.pozadina{
+    height: 100vh;
+}
+.pozadina img{
+    width: 100%;
+    height: 100%;
+}
+
+.toglovi{
+    display: flex;
+    justify-content: center;
+    margin-top: 140px;
+}
+.toggle1{
+    padding: 10px 30px;
+    text-decoration: none;
+}
+
+.toggle1:hover{
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.toggle2{
+    padding: 10px 30px;
+    border-bottom: 1px solid black;
+}
+
+
+.toggle2:hover{
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.form-select{
+    padding: 10px 170px;
+    margin-top: 50px;
+    text-align: left;
+}
+
+.selekt{
+    padding: 8px 337px 8px 5px;
+    margin-top: 20px;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.selekt2{
+    padding: 8px 320px 8px 5px;
+    margin-top: 20px;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.donjeforme{
+    margin-top: 30px;
+}
+
+.zadnjeforme{
+    display: flex;
+    align-items: center;
+}
+
+.zadnjeforme i{
+    position: absolute;
+    left: 170px;
+    padding: 11px 20px;
+}
+
+.zadnjeforme input{
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.zadnjeforme input::placeholder{
+    color: black;
+}
