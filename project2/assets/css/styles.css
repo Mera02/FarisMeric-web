@@ -41,7 +41,7 @@ body{
 .pozadina {
     height: 100vh;
     width: 100%;
-    background-image: url(../slike/pozadina.jpg);
+    background-image: url('../../slike/pozadina.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
